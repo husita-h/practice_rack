@@ -1,6 +1,8 @@
 require "sinatra/base"
+# require "rack"
 
-Dir.glob("./app/controller/*.rb").each { |file| require file }
+Dir.glob("./app/controllers/*.rb").each { |file| require file }
 
-# run ApplicationController
-ApplicationController.run!
+use SubController
+run ApplicationController
+# ApplicationController.run!

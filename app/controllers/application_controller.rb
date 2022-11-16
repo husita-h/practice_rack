@@ -1,9 +1,8 @@
 class ApplicationController < Sinatra::Base
   # helpers ApplicationHelper
 
-  set :views, File.expand_path("../view", __dir__)
-
   configure :production, :development do
+    set :views, "app/views"
     enable :logging
     # file = File.new("log/rack.log", "a+")
     # file.sync = true
@@ -17,6 +16,6 @@ class ApplicationController < Sinatra::Base
   # end
 
   get "/" do
-    logger.info
+    erb :index
   end
 end
