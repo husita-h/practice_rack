@@ -1,5 +1,6 @@
 class SubController < ApplicationController
   get "/sub" do
-    erb :sub
+    data = { foo: "bar" }
+    json data
   end
 end

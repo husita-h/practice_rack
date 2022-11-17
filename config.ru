@@ -1,5 +1,9 @@
 require "sinatra/base"
-# require "rack"
+# require "sinatra/cors"
+require "sinatra/cookies" # https://sinatrarb.com/contrib/cookies.html
+require "sinatra/config_file" # https://sinatrarb.com/contrib/config_file
+require "sinatra/json"
+require "sinatra/reloader"
 
 Dir.glob("./app/controllers/*.rb").each { |file| require file }
 
