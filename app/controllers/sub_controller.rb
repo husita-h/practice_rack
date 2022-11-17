@@ -1,6 +1,8 @@
 class SubController < ApplicationController
   get "/sub" do
-    data = { foo: "bar" }
+    id = ENV["ID"]
+    pass = ENV["PASSWORD"]
+    data = { id:, pass: }
     json data
   end
 end

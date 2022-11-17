@@ -3,3 +3,4 @@ vendor/bundle
 .bundle
 log
 config/config.yml
+.env
